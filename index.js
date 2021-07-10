@@ -1,8 +1,9 @@
-import {GraphQLServer} from 'graphql-yoga';
+import {ApolloServer} from 'apollo-server';
 import resolvers from './graphql/resolver';
+import typeDefs from './graphql/schema';
 
-const server = new GraphQLServer({
-    typeDefs:"graphql/schema.graphql",
+const server = new ApolloServer({
+    typeDefs,
     resolvers
 })
-server.start(() => console.log("Graphql Server Running:4000"))
+server.listen().then(() => console.log("Graphql Server Running:4000"))
