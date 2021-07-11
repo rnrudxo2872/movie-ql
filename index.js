@@ -9,4 +9,6 @@ const server = new ApolloServer({
     resolvers
 })
 
-server.listen().then(() => console.log("Graphql Server Running:4000"))
+server.listen({
+    port:4250
+}).then(() => console.log("Graphql Server Running:4250"))
