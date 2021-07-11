@@ -14,6 +14,7 @@ type Movie {
 type Query {
   movies(limit: Int, rating: Float): [Movie]!
   movie(id: Int!): Movie
+  suggestMovie(id: Int!): [Movie]
 }
 
 type Mutation {
